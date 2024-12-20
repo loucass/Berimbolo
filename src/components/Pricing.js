@@ -1,57 +1,66 @@
-import React from 'react';
-import { Check, Flame } from 'lucide-react';
+import React from "react";
+import { Check, Flame } from "lucide-react";
 
 const Pricing = () => {
   const plans = [
     {
-      name: 'Basic',
+      name: "Basic",
       price: 0,
-      period: 'Free',
-      features: ['One Device', 'Basic support', 'Community access'],
-      color: 'bg-gray-100',
-      buttonColor: 'btn-secondary',
+      period: "Free",
+      features: ["One Device", "Basic support", "Community access"],
+      color: "bg-gray-100",
+      buttonColor: "btn-primary",
     },
     {
-      name: 'Advanced',
+      name: "Advanced",
       price: 30,
-      period: '/month',
-      features: ['3 Devices', 'Priority support', 'Access to Pro features'],
-      color: 'bg-blue-100',
-      buttonColor: 'btn-primary',
+      period: "/month",
+      features: ["3 Devices", "Priority support", "Access to Pro features"],
+      color: "bg-blue-100",
+      buttonColor: "btn-primary",
       isHot: true,
     },
     {
-      name: 'Premium',
+      name: "Premium",
       price: 45,
-      period: '/month',
-      features: ['Unlimited Devices', '24/7 support', 'Custom solutions'],
-      color: 'bg-purple-100',
-      buttonColor: 'btn-primary',
+      period: "/month",
+      features: ["Unlimited Devices", "24/7 support", "Custom solutions"],
+      color: "bg-purple-100",
+      buttonColor: "btn-primary",
     },
   ];
 
   return (
     <section id="pricing" className="section bg-gradient">
       <div className="container">
-        <h2 className="section-title" data-aos="fade-up">Tailored Installation Plans</h2>
+        <h2 className="section-title" data-aos="fade-up">
+          Tailored Installation Plans
+        </h2>
         <p className="section-description" data-aos="fade-up">
           Choose the perfect plan that fits your security needs and budget
         </p>
 
         <div className="pricing-grid">
           {plans.map((plan, index) => (
-            <div key={index} className={`pricing-card ${plan.color}`} data-aos="fade-up" data-aos-delay={index * 100}>
+            <div
+              key={index}
+              className={`pricing-card ${plan.color}`}
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+            >
               {plan.isHot && (
                 <div className="hot-offer">
                   <Flame className="flame-icon" />
                   <span>Hot Offer</span>
                 </div>
               )}
-              <div className="pricing-header">
-                <h3 className="pricing-title">{plan.name}</h3>
+              <div className="">
+                <h3 className={`pricing-title ${plan.name}`}>{plan.name}</h3>
                 <div className="pricing-price">
-                  {plan.price === 0 ? 'Free' : `$${plan.price}`}
-                  {plan.period !== 'Free' && <span className="pricing-period">{plan.period}</span>}
+                  {plan.price === 0 ? "Free" : `$${plan.price}`}
+                  {plan.period !== "Free" && (
+                    <span className="pricing-period">{plan.period}</span>
+                  )}
                 </div>
               </div>
               <div className="pricing-features">
@@ -64,9 +73,7 @@ const Pricing = () => {
                   ))}
                 </ul>
               </div>
-              <button className={`btn ${plan.buttonColor}`}>
-                Get Started
-              </button>
+              <button className={`btn ${plan.buttonColor}`}>Get Started</button>
             </div>
           ))}
         </div>
@@ -76,6 +83,14 @@ const Pricing = () => {
           display: grid;
           gap: 2rem;
           grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .Advanced {
+          color: #8a2be2;
+        }
+
+        .Premium {
+          color: #6a00ab;
         }
 
         .pricing-card {
@@ -157,4 +172,3 @@ const Pricing = () => {
 };
 
 export default Pricing;
-

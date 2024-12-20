@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import React, { useState } from "react";
+import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,19 +9,33 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container">
         <div className="navbar-content">
-          <a href="/" className="navbar-brand">
-            SecureGuard
-          </a>
+          <Link to="/" className="navbar-brand">
+            Berimbolo
+          </Link>
 
-          <div className={`navbar-menu ${isOpen ? 'open' : ''}`}>
-            <a href="/" className="navbar-link">Home</a>
-            <a href="#services" className="navbar-link">Services</a>
-            <a href="#products" className="navbar-link">Products</a>
-            <a href="#pricing" className="navbar-link">Pricing</a>
-            <a href="#contact" className="navbar-link">Contact</a>
+          <div className={`navbar-menu ${isOpen ? "open" : ""}`}>
+            <Link to="/" className="navbar-link">
+              Home
+            </Link>
+            <a href="#services" className="navbar-link">
+              Services
+            </a>
+            <Link to="/products" className="navbar-link">
+              Products
+            </Link>
+            <a href="#pricing" className="navbar-link">
+              Pricing
+            </a>
+            <a href="#contact" className="navbar-link">
+              Contact
+            </a>
             <div className="navbar-buttons">
-              <a href="/signin" className="btn btn-secondary">Sign in</a>
-              <a href="/signup" className="btn btn-primary">Sign up</a>
+              <a href="/signin" className="btn btn-secondary">
+                Sign in
+              </a>
+              <a href="/signup" className="btn btn-primary">
+                Sign up
+              </a>
             </div>
           </div>
 
@@ -126,4 +141,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

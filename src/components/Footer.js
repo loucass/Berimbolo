@@ -1,5 +1,5 @@
-import React from 'react';
-import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import React from "react";
+import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,47 +9,103 @@ const Footer = () => {
       <div className="container footer-content">
         <div className="footer-grid">
           <div>
-            <h3 className="footer-title">SecureGuard</h3>
-            <p className="footer-description">Providing top-notch security solutions for your peace of mind.</p>
+            <h3 className="footer-title">Berimbolo</h3>
+            <p className="footer-description">
+              Providing top-notch security solutions for your peace of mind.
+            </p>
           </div>
           <div>
             <h4 className="footer-title">Quick Links</h4>
             <ul className="footer-links">
-              <li><a href="/" className="footer-link">Home</a></li>
-              <li><a href="#services" className="footer-link">Services</a></li>
-              <li><a href="#products" className="footer-link">Products</a></li>
-              <li><a href="#pricing" className="footer-link">Pricing</a></li>
-              <li><a href="#contact" className="footer-link">Contact</a></li>
+              <li>
+                <a href="/" className="footer-link">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="footer-link">
+                  Services
+                </a>
+              </li>
+              <li>
+                <a href="#products" className="footer-link">
+                  Products
+                </a>
+              </li>
+              <li>
+                <a href="#pricing" className="footer-link">
+                  Pricing
+                </a>
+              </li>
+              <li>
+                <a href="#contact" className="footer-link">
+                  Contact
+                </a>
+              </li>
             </ul>
           </div>
           <div>
             <h4 className="footer-title">Legal</h4>
             <ul className="footer-links">
-              <li><a href="/privacy-policy" className="footer-link">Privacy Policy</a></li>
-              <li><a href="/terms-of-service" className="footer-link">Terms of Service</a></li>
-              <li><a href="/cookie-policy" className="footer-link">Cookie Policy</a></li>
+              <li>
+                <a href="/privacy-policy" className="footer-link">
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a href="/terms-of-service" className="footer-link">
+                  Terms of Service
+                </a>
+              </li>
+              <li>
+                <a href="/cookie-policy" className="footer-link">
+                  Cookie Policy
+                </a>
+              </li>
             </ul>
           </div>
           <div>
             <h4 className="footer-title">Connect With Us</h4>
             <div className="social-icons">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon"
+              >
                 <Facebook />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon"
+              >
                 <Twitter />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon"
+              >
                 <Instagram />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon"
+              >
                 <Linkedin />
               </a>
             </div>
           </div>
         </div>
         <div className="footer-bottom">
-          <p className="footer-copyright">&copy; {currentYear} SecureGuard. All rights reserved.</p>
+          <p className="footer-copyright">
+            &copy; {currentYear} SecureGuard. All rights reserved.
+          </p>
         </div>
       </div>
       <style jsx>{`
@@ -121,4 +177,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

@@ -1,39 +1,23 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-
-import "./App.css";
+import React from "react";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Services from "./components/Services";
-import Products from "./components/Products";
-import Pricing from "./components/Pricing";
-import Testimonials from "./components/Testimonials";
-import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
+import "./App.css";
+import ProductsPage from "./components/page";
+import { Route, Routes } from "react-router-dom";
+import MainPage from "./MainPage";
+import ProductDetail from "./components/ProductDetails";
 
-function App() {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  }, []);
-
+export default function App() {
   return (
-    <div className="App">
+    <div className="page-wrapper">
       <Navbar />
-      <main>
-        <Hero />
-        <Services />
-        <Products />
-        <Pricing />
-        <Testimonials />
-        <ContactForm />
-      </main>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/products" element={<ProductsPage />} />
+        <Route path="/products/:id" element={<ProductDetail />} />
+      </Routes>
+
       <Footer />
     </div>
   );
 }
-
-export default App;

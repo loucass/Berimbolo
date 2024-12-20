@@ -1,23 +1,23 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
     <section className="hero-section">
       <div className="container">
         <div data-aos="fade-up">
-          <h1 className="hero-title">
-            Premium Security for Peace of Mind
-          </h1>
+          <h1 className="hero-title">Premium Security for Peace of Mind</h1>
           <p className="hero-description">
-            Reliable security products with expert installation plans tailored to your needs
+            Reliable security products with expert installation plans tailored
+            to your needs
           </p>
           <div className="hero-buttons">
-            <a href="#contact" className="btn btn-primary">
+            <Link to="#contact" className="btn btn-primary">
               Get Started
-            </a>
-            <a href="#products" className="btn btn-secondary">
+            </Link>
+            <Link to="#products" className="btn btn-secondary">
               Explore Products
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -56,4 +56,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
