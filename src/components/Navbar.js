@@ -30,12 +30,12 @@ const Navbar = () => {
               Contact
             </a>
             <div className="navbar-buttons">
-              <a href="/signin" className="btn btn-secondary">
+              <Link to="/signin" className="btn btn-secondary">
                 Sign in
-              </a>
-              <a href="/signup" className="btn btn-primary">
+              </Link>
+              <Link to="/signup" className="btn btn-primary">
                 Sign up
-              </a>
+              </Link>
             </div>
           </div>
 

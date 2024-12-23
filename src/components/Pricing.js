@@ -34,7 +34,7 @@ const Pricing = () => {
     <section id="pricing" className="section bg-gradient">
       <div className="container">
         <h2 className="section-title" data-aos="fade-up">
-          Tailored Installation Plans
+          Installation Plans
         </h2>
         <p className="section-description" data-aos="fade-up">
           Choose the perfect plan that fits your security needs and budget
